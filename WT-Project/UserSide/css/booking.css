@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  background: #f6f6f6;
+  color: #333;
+}
+
+/* NAVBAR */
+header {
+  width: 100%;
+  padding: 15px 50px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ff914d;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.navbar a:hover,
+.navbar a.active {
+  color: #ff7a26;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+/* Hamburger Animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* HERO SECTION */
+.hero-booking {
+  height: 45vh;
+  background: url("https://images.unsplash.com/photo-1755608775816-2d3960e6edc3?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+.hero-booking .hero-content {
+  text-align: center;
+}
+.hero-booking h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+.hero-booking p {
+  font-size: 18px;
+}
+
+/* BOOKING FORM */
+.booking-form-section {
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#bookingForm {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+#bookingForm input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+#bookingForm button {
+  padding: 12px;
+  background: #ff914d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#bookingForm button:hover {
+  background: #ff7a26;
+}
+
+#confirmationMsg {
+  margin-top: 20px;
+  font-size: 16px;
+  color: green;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+
+
+/* Tablets */
+@media (max-width: 992px) {
+  header {
+    padding: 15px 25px;
+  }
+
+  .navbar a {
+    margin-left: 15px;
+    font-size: 15px;
+  }
+
+  .hero-booking h1 {
+    font-size: 38px;
+  }
+
+  .hero-booking p {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 50px;
+    transition: 0.3s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar.active {
+    left: 0;
+  }
+
+  .navbar a {
+    margin: 15px 0;
+    font-size: 18px;
+    padding: 12px 0;
+    width: 80%;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .navbar a:last-child {
+    border-bottom: none;
+  }
+
+  .hero-booking {
+    height: 35vh;
+    padding: 0 20px;
+  }
+
+  .hero-booking h1 {
+    font-size: 32px;
+  }
+
+  .hero-booking p {
+    font-size: 14px;
+  }
+
+  .booking-form-section {
+    padding: 40px 15px;
+  }
+
+  #bookingForm {
+    padding: 20px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 22px;
+  }
+
+  .hero-booking h1 {
+    font-size: 26px;
+  }
+
+  .hero-booking p {
+    font-size: 13px;
+  }
+
+  #bookingForm input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  #bookingForm button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  #confirmationMsg {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+}

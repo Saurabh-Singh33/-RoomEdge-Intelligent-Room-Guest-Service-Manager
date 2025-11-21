@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu | Saurabh Kitchen</title>
+<link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <div class="logo">🍽️ Saurabh Kitchen</div>
+    
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html" class="active">Menu</a>
+        <a href="booking.html">Booking</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="login.html">Login</a>
+    </nav>
+    
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+
+<!-- MENU SECTION -->
+<section class="menu">
+    <h1>Our Menu</h1>
+    <button id="orderAllBtn" class="order-all-btn">Order </button>
+
+    <div class="menu-filter">
+        <button data-category="all" class="filter-btn active">All</button>
+        <button data-category="starter" class="filter-btn">Starters</button>
+        <button data-category="main" class="filter-btn">Main Course</button>
+        <button data-category="dessert" class="filter-btn">Desserts</button>
+        <button data-category="drinks" class="filter-btn">Drinks</button>
+    </div>
+
+    <div class="menu-grid">
+
+        <!-- STARTERS -->
+        <div class="menu-card starter">
+            <img src="https://images.unsplash.com/photo-1669340781012-ae89fbac9fc3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Spring Rolls">
+            <h3>Spring Rolls</h3>
+            <p>₹120</p>
+
+            <!-- ORDER ADDED -->
+            <div class="order-box">
+                <input type="number" min="1" value="1" class="qty-input">
+                <button class="add-btn">Add Item</button>
+            </div>
+        </div>
+
+        <div class="menu-card starter">
+            <img src="https://media.istockphoto.com/id/1314329942/photo/goal-gappa-or-pani-puri.jpg?s=1024x1024&w=is&k=20&c=6l6_N-llXVhlg-yS_z9GcBwp4RAOvG9-DY-RZzlgzuY=" alt="pani puri">
+            <h3>Pani Puri</h3>
+            <p>₹150</p>
+
+            <div class="order-box">
+                <input type="number" min="1" value="1" class="qty-input">
+               <button class="add-btn">Add Item</button>
+            </div>
+        </div>
+
+        <div class="menu-card starter">
+            <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <h3>dosa</h3>
+            <p>₹150</p>
+
+            <div class="order-box">
+                <input type="number" min="1" value="1" class="qty-input">
+               <button class="add-btn">Add Item</button>
+            </div>
+        </div>
+
+        <div class="menu-card starter">
+            <img src="https://plus.unsplash.com/premium_photo-1675252369719-dd52bc69c3df?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <h3>burger</h3>
+            <p>₹150</p>
+
+            <div class="order-box">
+                <input type="number" min="1" value="1" class="qty-input">
+                <button class="add-btn">Add Item</button>
+            </div>
+        </div>
+
+        <div class="menu-card starter">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=781&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <h3>pizza</h3>
+            <p>₹150</p>
+
+            <div class="order-box">
+                <input type="number" min="1" value="1" class="qty-input">
+                <button class="add-btn">Add Item</button>
+            </div>
+        </div>
+
+        <!-- MAIN -->
+        <div class="menu-card main">
+            <img src="https://images.unsplash.com/photo-1742281258189-3b933879867a?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <h3>Veg Thali</h3>
+            <p>₹250</p>
+
+            <div class="order-box">
+                <input type="number" min="1" value="1" class="qty-input">
+               <button class="add-btn">Add Item</button>
+            </div>
+        </div>
+
+        <div class="menu-card main">
+            <img src="https://media.istockphoto.com/id/838927480/photo/onam-sadya-on-a-banana-leaf.jpg?s=2048x2048&w=is&k=20&c=FqF5ghlR-ElQPnaL0rHrQCFW0aN9ItFs34qWM7utIXY=" alt="">
+            <h3>South Indian</h3>
+            <p>₹350</p>
+
+            <div class="order-box">
+                <input type="number" min="1" value="1" class="qty-input">
+                <button class="add-btn">Add Item</button>
+            </div>
+        </div>
+
+        <!-- DESSERT -->
+        <div class="menu-card dessert">
+            <img src="https://images.unsplash.com/photo-1576365503602-7327d056d159?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <h3>Chocolate Cake</h3>
+            <p>₹180</p>
+
+            <div class="order-box">
+                <input type="number" min="1" value="1" class="qty-input">
+                <button class="add-btn">Add Item</button>
+            </div>
+        </div>
+
+        <div class="menu-card dessert">
+            <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?q=80&w=744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <h3>Ice Cream Sundae</h3>
+            <p>₹120</p>
+
+            <div class="order-box">
+                <input type="number" min="1" value="1" class="qty-input">
+               <button class="add-btn">Add Item</button>
+            </div>
+        </div>
+
+        <!-- DRINKS -->
+        <div class="menu-card drinks">
+            <img src="https://images.unsplash.com/photo-1530373239216-42518e6b4063?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <h3>Cold Coffee</h3>
+            <p>₹110</p>
+
+            <div class="order-box">
+                <input type="number" min="1" value="1" class="qty-input">
+               <button class="add-btn">Add Item</button>
+            </div>
+        </div>
+
+        <div class="menu-card drinks">
+            <img src="https://images.unsplash.com/photo-1575596510825-f748919a2bf7?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <h3>Lemonade</h3>
+            <p>₹90</p>
+
+            <div class="order-box">
+                <input type="number" min="1" value="1" class="qty-input">
+                <button class="add-btn">Add Item</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Saurabh Kitchen. All rights reserved.</p>
+</footer>
+
+<script src="js/menu.js"></script>
+<script src="js/navbar.js"></script>
+</body>
+</html>

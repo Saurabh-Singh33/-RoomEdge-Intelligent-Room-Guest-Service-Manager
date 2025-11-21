@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f6f6f6;
+  color: #333;
+}
+
+/* NAVBAR */
+header {
+  width: 100%;
+  padding: 15px 50px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ff914d;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #ff7a26;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+/* Hamburger Animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* HERO ABOUT */
+.hero-about {
+  position: relative;
+  height: 50vh;
+  background-image: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&auto=format&fit=crop&q=60");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  width: 70%;
+  margin: auto;
+}
+
+/* ABOUT SECTION */
+.about {
+  padding: 50px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 15px auto;
+  font-size: 18px;
+  color: #555;
+}
+
+/* TEAM SECTION */
+.team {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.chef {
+  background: white;
+  padding: 15px;
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.chef:hover {
+  transform: translateY(-8px);
+}
+
+.chef img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.chef h3 {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+.chef p {
+  color: #666;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+/* FOOTER */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* -------------------------------------- */
+/*            RESPONSIVENESS              */
+/* -------------------------------------- */
+
+/* Medium Screens */
+@media (max-width: 900px) {
+
+  header {
+    padding: 15px 25px;
+  }
+
+  .navbar a {
+    margin-left: 15px;
+    font-size: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-content p {
+    width: 85%;
+    font-size: 18px;
+  }
+
+  .about {
+    padding: 40px 30px;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 600px) {
+
+  header {
+    padding: 10px 20px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 50px;
+    transition: 0.3s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar.active {
+    left: 0;
+  }
+
+  .navbar a {
+    margin: 15px 0;
+    font-size: 18px;
+    padding: 12px 0;
+    width: 80%;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .navbar a:last-child {
+    border-bottom: none;
+  }
+
+  .hero-about {
+    height: 40vh;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    width: 95%;
+    font-size: 15px;
+  }
+
+  .about {
+    padding: 30px 20px;
+  }
+
+  .about h2 {
+    font-size: 24px;
+  }
+
+  .about p {
+    font-size: 16px;
+  }
+
+  .chef {
+    width: 90%;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 420px) {
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .chef {
+    width: 100%;
+  }
+}

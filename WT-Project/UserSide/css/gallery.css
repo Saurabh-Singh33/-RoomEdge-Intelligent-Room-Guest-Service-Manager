@@ -1,0 +1,258 @@
+* {margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif;}
+body {background:#f6f6f6;}
+
+/* NAVBAR */
+header {
+    width:100%;
+    padding:15px 50px;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo {font-size:26px; font-weight:bold; color:#ff914d;}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {margin-left:20px; text-decoration:none; color:#333; font-weight:600; transition:.3s;}
+.navbar a:hover, .navbar a.active {color:#ff7a26;}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* Hamburger Animation */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* GALLERY SECTION */
+.gallery-section {
+    padding:50px;
+    text-align:center;
+}
+
+.gallery-section h1 {
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+.gallery-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+    gap:20px;
+}
+
+.g-img {
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.g-img:hover {
+    transform:scale(1.05);
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* MODAL POPUP */
+.modal {
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+    justify-content:center;
+    align-items:center;
+    z-index:200;
+}
+
+.modal-content {
+    width:80%;
+    max-width:700px;
+    border-radius:12px;
+    animation:zoom .3s ease;
+}
+
+@keyframes zoom {
+    from {transform:scale(0.3);}
+    to {transform:scale(1);}
+}
+
+.close {
+    position:absolute;
+    top:20px;
+    right:40px;
+    font-size:40px;
+    color:white;
+    cursor:pointer;
+}
+
+/* FOOTER */
+footer {
+    margin-top:40px;
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+
+
+/* Tablets */
+@media (max-width: 992px) {
+    header {
+        padding: 15px 25px;
+    }
+
+    .navbar a {
+        margin-left: 15px;
+        font-size: 15px;
+    }
+
+    .gallery-section {
+        padding: 40px 30px;
+    }
+
+    .gallery-section h1 {
+        font-size: 34px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 15px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 50px;
+        transition: 0.3s;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar.active {
+        left: 0;
+    }
+
+    .navbar a {
+        margin: 15px 0;
+        font-size: 18px;
+        padding: 12px 0;
+        width: 80%;
+        text-align: center;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .navbar a:last-child {
+        border-bottom: none;
+    }
+
+    .gallery-section {
+        padding: 30px 20px;
+    }
+
+    .gallery-section h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 12px;
+    }
+
+    .g-img {
+        height: 180px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .close {
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 22px;
+    }
+
+    .gallery-section h1 {
+        font-size: 24px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .g-img {
+        height: 150px;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+
+    .close {
+        top: 5px;
+        right: 15px;
+        font-size: 25px;
+    }
+}

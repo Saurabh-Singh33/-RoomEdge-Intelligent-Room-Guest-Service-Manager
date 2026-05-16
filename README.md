@@ -94,15 +94,8 @@ All pages smoothly connected with simple HTML navigation. ✨
 
 ⚙️ Vanilla JavaScript
 
-❌ No backend
-
-❌ No server files
-
-❌ No MySQL / MongoDB
 
 ❌ No LocalStorage (unless added manually)
-
-🎯 Short Description (2–3 Lines)
 
 RoomEdge is a fully frontend hotel and kitchen management interface that includes room booking, table booking, food gallery, and a static admin UI — all built with pure HTML, CSS, and JavaScript.
 A polished, responsive, and visually rich system made for modern UI/UX demonstration. ✨🔥

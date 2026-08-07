@@ -90,7 +90,7 @@ All pages smoothly connected with simple HTML navigation. ✨
 
 🌐 HTML5
 
-🎨 CSS3 / Tailwind / Bootstrap
+🎨 CSS3 / Tailwind
 
 ⚙️ Vanilla JavaScript
 
